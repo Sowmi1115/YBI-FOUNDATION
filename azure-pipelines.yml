@@ -2,6 +2,11 @@
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    projects: '**/*.csproject'
+    arguments: '--'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
     projects: '**/*csproject'
     arguments: '--'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
